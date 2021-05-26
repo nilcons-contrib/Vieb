@@ -200,6 +200,12 @@ const scrollPageRight = () => currentPage()?.send("action", "scrollPageRight")
 
 const scrollPageLeft = () => currentPage()?.send("action", "scrollPageLeft")
 
+const openHoplax = () => {
+    const {navigateTo} = require("./tabs")
+    navigateTo(stringToUrl("file:///home/errge/hoplax/hoplax/index.html?l=/home/errge/docs/hoplax/bookmarks.js"))
+    setTimeout(() => currentPage()?.send("focus-input"), 200)
+}
+
 const toCommandMode = () => {
     const {setMode} = require("./modes")
     setMode("command")
@@ -656,5 +662,6 @@ module.exports = {
     useEnteredData,
     zoomIn,
     zoomOut,
-    zoomReset
+    zoomReset,
+    openHoplax
 }
