@@ -465,4 +465,4 @@ setInterval(() => {
             // Not an issue, will be retried shortly
         }
     })
-}, 0)
+}, 500)
